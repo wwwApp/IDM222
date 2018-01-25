@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Your Chinese Zodiac Sign</title>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <!-- embedding webfonts -->
+        <link rel="stylesheet" link href="https://fonts.googleapis.com/css?family=Mountains+of+Christmas|Quicksand">
+    </head>
+
+    <body>
+        <div class = "wrapper">
+        <div class = "interface">
+        <!-- buttons row1 -->
+        <div class = "buttons row1">
+            <img id = "rat-button" src="images/buttons/rat.png" alt = "rat-button"/>
+            <img id = "pig-button" src="images/buttons/pig.png" alt = "pig-button"/>
+            <img id = "dragon-button" src="images/buttons/dragon.png" alt = "dragon-button"/>
+            <img id = "snake-button" src="images/buttons/snake.png" alt = "snake-button"/>
+            <img id = "rabbit-button" src="images/buttons/rabbit.png" alt = "rabbit-button"/>
+            <img id = "ox-button" src="images/buttons/ox.png" alt = "ox-button"/>
+        </div>
+        <div class = "content">
+                <!-- zodiac images -->
+                <div class = "image-container" id = "image-container">
+                    <img id = "rat-image" src = "images/results/rat.png" alt = "rat"/>
+                    <img id = "pig-image" src = "images/results/pig.png" alt = "pig"/>
+                    <img id = "dragon-image" src = "images/results/dragon.png" alt = "dragon"/>
+                    <img id = "snake-image" src = "images/results/snake.png" alt = "snake"/>
+                    <img id = "rabbit-image" src = "images/results/rabbit.png" alt = "rabbit"/>
+                    <img id = "ox-image" src = "images/results/ox.png" alt = "ox"/>
+                    <img id = "monkey-image" src = "images/results/monkey.png" alt = "monkey"/>
+                    <img id = "rooster-image" src = "images/results/rooster.png" alt = "rooster"/>
+                    <img id = "tiger-image" src = "images/results/tiger.png" alt = "tiger"/>
+                    <img id = "sheep-image" src = "images/results/sheep.png" alt = "sheep"/>
+                    <img id = "horse-image" src = "images/results/horse.png" alt = "horse"/>
+                    <img id = "dog-image" src = "images/results/dog.png" alt = "dog"/>
+                    <img id = "default-image" src = "images/results/default.png" alt = "none-selected"/>
+                </div>
+                <div class = "content-container">
+                    <!-- title and result text -->
+                    <p id = "title">Your Chinese Zodiac Sign</p>
+                    <div id = "date-container">
+                        <p>12/22 - 1/19</p>
+                        <p>11/22 - 12/21</p>
+                        <p>10/24 - 11/21</p>
+                        <p>9/23 - 10/23</p>
+                        <p>8/23 - 9/22</p>
+                        <p>7/23 - 8/22</p>
+                        <p>6/22 - 7/22</p>
+                        <p>5/21 - 6/21</p>
+                        <p>4/20 - 5/20</p>
+                        <p>3/21 - 4/19</p>
+                        <p>2/19 - 3/20</p>
+                        <p>1/20 - 2/18</p>
+                    </div>
+                    <div class = "test-content" id = "test-content">
+                        <p id = "rat-text">People born in the Year of the Rat are instinctive, acute and alert in nature which makes them to be brilliant businessmen.</p>
+                        <p id = "pig-text">People with Chinese zodiac Pig sign are considerate, responsible, independent and optimistic.</p>
+                        <p id = "dragon-text">People with Chinese zodiac Dragon sign are usually a group of people who are lively, intellectual and excitable.</p>
+                        <p id = "snake-text">People with Chinese zodiac sign 'Snake', sensitive and humorous, and most of them are gifted in literature and art.</p>
+                        <p id = "rabbit-text">People with Chinese zodiac Rabbit sign usually impress others with an image of tenderness, grace and sensitive.</p>
+                        <p id = "ox-text">People born in the Year of Ox bear persistent, simple, honest, and straightforward characteristics.</p>
+                        <p id = "monkey-text">The general image of people born in the Year of the Monkey is of always being smart, clever and intelligent, especially in their career and wealth.</p>
+                        <p id = "rooster-text">People born in the Year of Rooster according to Chinese zodiac have many excellent characteristics, such as being honest, bright, communicative and ambitious.</p>
+                        <p id = "tiger-text">People with Chinese zodiac sign 'Tiger' are powerful, independent, confident and brave. They have strong sense of errantry, being frank and easy to win others' trust.</p>
+                        <p id = "sheep-text">People born in the Year of the Sheep are tender, polite, filial, clever, and kind-hearted.</p>
+                        <p id = "horse-text">They always impress upon people with dynamic, zealous and generous image.</p>
+                        <p id = "dog-text">People born in the Year of the Dog are usually independent, sincere, loyal and decisive according to Chinese zodiac analysis.</p>
+                        <p id = "default-text">The Chinese Zodiac, known as Sheng Xiao, is based on a twelve-year cycle, each year in that cycle related to an animal sign.
+                                <br/>Let me tell you WHAT you are!</p>
+                    </div>
+                    <div class = "input-container">
+                        <form id = "input-fields" onsubmit="event.preventDefault(); return getZodiacAnimal();">
+                            <p>
+                                <input id = "name" name = "name" type = "text" placeholder = "name">
+                            </p>
+                            <p>
+                                <input id = "bday" name = "bday" type = "date" required>
+                            </p>
+                            <input id = "enter" type= "submit" value = "Enter">
+                        </form>
+                            <img id = "help-button" src = "images/help.png"/>
+                    </div>
+                </div>
+        </div>
+        <!-- help image -->
+        <div class = "help">
+            <img id = "help-image" src="images/help-ss.png"/>
+            <a href="#" id = "exit-help">X</a>
+        </div>
+
+        <!-- buttons row2 -->
+        <div class = "buttons row2">
+            <img id = "monkey-button" src="images/buttons/monkey.png" alt = "monkey-button"/>
+            <img id = "rooster-button" src="images/buttons/rooster.png" alt = "rooster-button"/>
+            <img id = "tiger-button" src="images/buttons/tiger.png" alt = "tiger-button"/>
+            <img id = "sheep-button" src="images/buttons/sheep.png"/ alt = "sheep-button">
+            <img id = "horse-button" src="images/buttons/horse.png"/ alt = "horse-button">
+            <img id = "dog-button" src="images/buttons/dog.png" alt = "dog-button"/>
+        </div>
+        </div> 
+        
+        <!-- sounds -->
+        <audio id="rat-sound" src="sounds/rat.mp3">No support for audio</audio>
+        <audio id="pig-sound" src="sounds/pig.mp3">No support for audio</audio>
+        <audio id="dragon-sound" src="sounds/dragon.mp3">No support for audio</audio>
+        <audio id="snake-sound" src="sounds/snake.mp3">No support for audio</audio>
+        <audio id="rabbit-sound" src="sounds/rabbit.mp3">No support for audio</audio>
+        <audio id="ox-sound" src="sounds/ox.mp3">No support for audio</audio>
+        <audio id="monkey-sound" src="sounds/monkey.mp3">No support for audio</audio>
+	    <audio id="rooster-sound" src="sounds/rooster.mp3">No support for audio</audio>
+        <audio id="tiger-sound" src="sounds/tiger.mp3">No support for audio</audio>
+        <audio id="sheep-sound" src="sounds/sheep.mp3">No support for audio</audio>
+        <audio id="horse-sound" src="sounds/horse.mp3">No support for audio</audio>
+        <audio id="dog-sound" src="sounds/dog.mp3">No support for audio</audio>
+        
+        <script type="text/javascript" src="main.js"></script>
+        </div>
+    </body>
+</html>
