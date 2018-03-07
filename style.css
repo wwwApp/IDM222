@@ -1,32 +1,67 @@
 /* general styles */
 html {
     font-size: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
 }
 
 body {
     margin: 0;
-    display: flex;
+    padding: 0;
+    width: 100%;
+    /*display: flex;
     flex-direction: column;
-    align-items: center;
-}
-
-header{
-    margin-top: 1.5rem;
-    text-align: center;
-    line-height: 1;
+    align-items: center;*/
 }
 
 footer{
     font-family: 'Alice', serif;
     font-size: .75rem;
     text-align: center;
-    margin-top: 30%;
+    margin-top: 20%;
 }
 
 a{
     color: black;
     text-decoration: none;
 }
+
+
+/* half-cut logo/contact styles */
+.white{
+    width: 100%;
+    height: 7rem;
+    background-color: white;
+}
+
+header.halfCut{
+    margin-top: 1.15rem;
+    padding-top: 1rem;
+    text-align: center;
+    line-height: 1;
+}
+
+.contact{
+    text-align: center;
+}
+
+.boxTop{
+    position: relative;
+    background-color: #FFDBD9;
+    width: 7rem;
+    height: 2rem;
+    margin-left: 50%;
+    top: -2rem;  
+}
+
+.boxBottom{
+    position: relative;
+    background-color: #FF9EA0;
+    width: 7rem;
+    height: 2rem;
+}
+
 
 /* general wrapper styles */
 .wrapper{
@@ -56,20 +91,30 @@ a{
     text-align: center;
 }
 
+.contact p a{
+    cursor: pointer;
+}
+
 .about{
-    margin-top: 3rem;
+    margin-top: 7rem;
 }
 
 
 /* worksGrid styles */
 .worksGrid{
     width: inherit;
-    display: grid;
+    display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     margin-top: 5rem;
-    margin-bottom: 3rem;
+    margin-bottom: 7rem;
 }
+
+.workContainer{
+    width: 100%;
+}
+
 .worksTitle{
     font-family: 'Alice', serif;
     font-size: 2rem;
@@ -84,41 +129,103 @@ a{
 }
 
 .workItem{
-    max-width: 100%;
-    display: none;
     background-color: white;
-    margin-bottom: 10%;
+    margin-bottom: 5%;
 }
 
-.workItem img{
+.horizontalImg{
     width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+}
+
+.verticalImg{
+    width: 50%;
     margin-top: 2rem;
     margin-bottom: 1rem;
 }
 
 .workItem p{
     font-family: 'Alice', serif;
-    width: 30rem;
-    margin: 0 5rem;
+    max-width: 100%;
+    margin: 0 auto;
     margin-bottom: 2rem;
+    padding: 0 3rem;
     line-height: 1.5;
 }
 
 .close{
     font-family: 'Dorsa', sans-serif;
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     cursor: pointer;
+    background: none;
+    border: none;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 1.5rem;
 }
 
 .close:hover{
     text-decoration: underline;
 }
 
-/* 600px breakpoint styles */
-@media (min-width: 10000px) {
-    div.wrapper {
-      background-color: green;
-      color: yellow;
-      max-width: 900px;
+/* 700px=40rem breakpoint styles */
+@media (min-width: 40rem) {
+    .horizontalImg{
+        width: 80%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .verticalImg{
+        width: 50%;
+        margin-top: 2rem;
+        margin-bottom: 1rem;
+    }
+    
+    .workItem p{
+        font-family: 'Alice', serif;
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 2rem;
+        padding: 0 2rem;
+        line-height: 1.5;
+    }
+  }
+
+  
+
+/* 1200px=75rem breakpoint styles */
+@media (min-width: 75rem) {
+    .doubleSide{
+        display: grid;
+        justify-content: center;
+        align-items: center;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 4/5fr 1/5fr;
+        grid-template-areas: 
+            'img p'
+            'img close';
+    }
+
+    .verticalImg{
+        grid-area: img;
+        align-self: center;
+
+        width: 50%;
+        margin-left: 45%;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
+    }
+    
+    .doubleSide p{
+        grid-area: p;
+
+        margin-top: 2rem;
+        margin-left: 0;
+    }
+
+    .doubleSide .close{
+        grid-area: close;
     }
   }

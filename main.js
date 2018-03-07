@@ -32,7 +32,7 @@ function closeWorkItem(event){
     const workItems = document.querySelectorAll('.workItem');
     var currentElementID = "";
     for (const workItem of workItems){
-        if(workItem.hidden = false){
+        if(workItem.hidden == false){
             currentElementID = workItem.getAttribute('id');
             console.log(currentElementID);
         }
