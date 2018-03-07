@@ -213,7 +213,7 @@ header.halfCut{
         align-self: center;
 
         width: 50%;
-        margin-left: 45%;
+        justify-self: end;
         margin-top: 2rem;
         margin-bottom: 2rem;
     }
