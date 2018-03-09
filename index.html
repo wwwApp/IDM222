@@ -13,10 +13,20 @@
     <body>
         <div class="white">
             <header class="halfCut">
-                WOO<br>
-                SONG
+                WOO
+                <div id="song">
+                    <div id="s">S</div>
+                    <div id="o">O</div>
+                    <div id="n">N</div>
+                    <div id="g">G</div>
+                </div>
             </header>
-            <div class="boxTop"></div>
+            <div id="boxTop">
+                <div class="noColor"></div>
+                <div class="noColor"></div>
+                <div class="pitch"></div>
+                <div class="pitch"></div>
+            </div>
         </div>
 
         <div class="wrapper">
@@ -31,9 +41,9 @@
             <div class="worksGrid">
                 <a href="#" class="divTitle">/works</a>
 
-                <div class="workContainer">
-                    <a href="#workItem-1" class="worksTitle">zodiac project</a>
-                    <div id="workItem-1" class="workItem" hidden>
+                <details class="workContainer" id="workContainer-1">
+                    <summary class="worksTitle">zodiac project</summary>
+                    <div class="workItem">
                         <img class="horizontalImg" src="assets/thumbnails/zodiac.png" alt="Zodiac Project" />
                         <p>
                             The Zodiac Project invites you to the festival of Chinese Zodiac!
@@ -43,11 +53,11 @@
                         </p>
                         <button class="close">close</button>
                     </div>
-                </div>
+                </details>
 
-                <div class="workContainer">
-                    <a href="#workItem-2" class="worksTitle">sparknote</a>
-                    <div id="workItem-2" class="workItem" hidden>
+                <details class="workContainer" id="workContainer-2">
+                    <summary class="worksTitle">sparknote</summary>
+                    <div class="workItem">
                         <img class="horizontalImg" src="assets/thumbnails/sparknote.png" alt="SparkNote Redesign Project" />
                         <p>
                             My job in this project was to re-design SparkNote in a way that it brings the
@@ -58,11 +68,11 @@
                         </p>
                         <button class="close">close</button>
                     </div>
-                </div>
+                </details>
 
-                <div class="workContainer">
-                    <a href="#workItem-3" class="worksTitle">csmg</a>
-                    <div id="workItem-3" class="workItem" hidden>
+                <details class="workContainer" id="workContainer-3">
+                    <summary class="worksTitle">csmg</summary>
+                    <div class="workItem">
                         <img class="horizontalImg" src="assets/thumbnails/csmg.png" alt="CSMG Mock-Up" />
                         <p>
                             My frist project in Web Design.
@@ -72,11 +82,11 @@
                         </p>
                         <button class="close">close</button>
                     </div>
-                </div>
+                </details>
 
-                <div class="workContainer">
-                    <a href="#workItem-4" class="worksTitle">alarmdar</a>
-                    <div id="workItem-4" class="workItem doubleSide" hidden>
+                <details class="workContainer" id="workContainer-4"> 
+                    <summary class="worksTitle">alarmdar</summary>
+                    <div class="workItem doubleSide">
                         <img class="verticalImg" src="assets/thumbnails/alarmdar.png" alt="Alarmdar Application Prototype" />
                         <p>
                             It was my first try coming up with an idea and a design for mobile application.
@@ -88,11 +98,11 @@
                         </p>
                         <button class="close">close</button>
                     </div>
-                </div>
+                </details>
 
-                <div class="workContainer">
-                    <a href="#workItem-5" class="worksTitle">the cabage queen</a>
-                    <div id="workItem-5" class="workItem doubleSide" hidden>
+                <details class="workContainer" id="workContainer-5">
+                    <summary class="worksTitle">the cabage queen</summary>
+                    <div class="workItem doubleSide">
                         <img class="verticalImg" src="assets/thumbnails/movie_poster.jpg" alt="Movie Poster using Self-Portrait" />
                         <p>
                             This is the product of my Illustration and Photoshop skills!
@@ -103,11 +113,11 @@
                         </p>
                         <button class="close">close</button>
                     </div>
-                </div>
+                </details>
 
-                <div class="workContainer">
-                    <a href="#workItem-6" class="worksTitle">transparency project</a>
-                    <div id="workItem-6" class="workItem" hidden>
+                <details class="workContainer" id="workContainer-6">
+                    <summary class="worksTitle">transparency project</summary>
+                    <div class="workItem">
                         <img class="horizontalImg" src="assets/thumbnails/transparency.png" alt="Transparency Project" />
                         <p>
                             This Transparency Project will let you explore the power of Transparency!
@@ -116,13 +126,21 @@
                         </p>
                         <button class="close">close</button>
                     </div>
-                </div>
+                </details>
 
             </div>
         </div>
 
-        <div class="contact white">
-            <div class="boxBottom"></div>
+        <div class="contact">
+            <div id="boxBottom">
+                <div class="noColor"></div>
+                <div class="noColor"></div>
+                <div class="noColor"></div>
+                <div class="noColor"></div>
+                <div class="noColor"></div>
+                <div class="pitch"></div>
+                <div class="pitch"></div>
+            </div>
             <a href="#" class="halfCut">Contact</a>
             <p>
                 Feel free to say hello!<br>

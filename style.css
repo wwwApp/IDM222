@@ -1,34 +1,37 @@
-/* general styles */
-html {
+/* general html/body styles */
+html{
     font-size: 100%;
     width: 100%;
     margin: 0;
     padding: 0;
 }
 
-body {
+body{
     margin: 0;
     padding: 0;
     width: 100%;
-    /*display: flex;
-    flex-direction: column;
-    align-items: center;*/
 }
 
 footer{
     font-family: 'Alice', serif;
     font-size: .75rem;
     text-align: center;
-    margin-top: 20%;
+    margin-top: 7rem;
 }
 
 a{
     color: black;
     text-decoration: none;
+    cursor: default;
 }
 
 
 /* half-cut logo/contact styles */
+.halfCut{
+    font-family: 'Alfa Slab One', cursive;
+    font-size: 4rem;
+}
+
 .white{
     width: 100%;
     height: 7rem;
@@ -42,28 +45,46 @@ header.halfCut{
     line-height: 1;
 }
 
+#song{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
 .contact{
     text-align: center;
+    margin-top: -4.5rem;
 }
 
-.boxTop{
+#boxTop{
     position: relative;
-    background-color: #FFDBD9;
-    width: 7rem;
-    height: 2rem;
-    margin-left: 50%;
-    top: -2rem;  
+    top: -2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
 }
 
-.boxBottom{
-    position: relative;
-    background-color: #FF9EA0;
-    width: 7rem;
+.noColor {
+    width: 3rem;
     height: 2rem;
 }
 
+.pitch {
+    background-color:#FFDBD9;
+    width: 3.5rem;
+    height: 2rem;
+}
 
-/* general wrapper styles */
+#boxBottom{
+    position: relative;
+    bottom: -2.5rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+/* general wrapper+contact styles */
 .wrapper{
     width: 100%;
     background-color: #FFDBD9;
@@ -73,14 +94,13 @@ header.halfCut{
     text-align: center;
 }
 
-.halfCut{
-    font-family: 'Alfa Slab One', cursive;
-    font-size: 4rem;
-}
-
 .divTitle{
     font-family: 'Alfa Slab One', cursive;
     font-size: 2rem;
+}
+
+.about{
+    margin-top: 7rem;
 }
 
 .about p, .contact p{
@@ -95,8 +115,8 @@ header.halfCut{
     cursor: pointer;
 }
 
-.about{
-    margin-top: 7rem;
+.contact p a:hover{
+    text-decoration: underline;
 }
 
 
@@ -107,12 +127,16 @@ header.halfCut{
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    margin-top: 5rem;
-    margin-bottom: 7rem;
+    margin-top: 7rem;
+    margin-bottom: 8rem;
 }
 
 .workContainer{
     width: 100%;
+}
+
+summary::-webkit-details-marker{
+    display: none;
 }
 
 .worksTitle{
@@ -126,6 +150,10 @@ header.halfCut{
 
 .worksTitle:hover{
     background-color: #FF9EA0;
+}
+
+.worksTitle:focus{
+    text-decoration: underline;
 }
 
 .workItem{
@@ -152,11 +180,12 @@ header.halfCut{
     margin-bottom: 2rem;
     padding: 0 3rem;
     line-height: 1.5;
+    text-align: left;
 }
 
 .close{
-    font-family: 'Dorsa', sans-serif;
-    font-size: 1.6rem;
+    font-family: 'Alice', serif;
+    font-size: 1rem;
     cursor: pointer;
     background: none;
     border: none;
@@ -170,7 +199,7 @@ header.halfCut{
 }
 
 /* 700px=40rem breakpoint styles */
-@media (min-width: 40rem) {
+@media (min-width: 40rem){
     .horizontalImg{
         width: 80%;
         margin-top: 2rem;
@@ -190,14 +219,17 @@ header.halfCut{
         margin-bottom: 2rem;
         padding: 0 2rem;
         line-height: 1.5;
+        text-align: left;
     }
   }
 
   
 
 /* 1200px=75rem breakpoint styles */
-@media (min-width: 75rem) {
+@media (min-width: 75rem){
     .doubleSide{
+        max-width: 100%;
+        padding-right: 10%;
         display: grid;
         justify-content: center;
         align-items: center;
@@ -223,6 +255,7 @@ header.halfCut{
 
         margin-top: 2rem;
         margin-left: 0;
+        text-align: left;
     }
 
     .doubleSide .close{
