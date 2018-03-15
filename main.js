@@ -1,6 +1,6 @@
-// ------------------------------
+/*
 // Title Button Functionality
-// ------------------------------
+*/
 
 //function to prevent default action for anchor elements
 const anchors = document.querySelectorAll('a');
@@ -26,9 +26,9 @@ for(workContainer of workContainers){
 
 
 
-// ------------------------------
+/*
 // Close Button Funtionality
-// ------------------------------
+*/
 
 //function to close the currently opened project div using button
 const closeButtons = document.querySelectorAll('.close');
