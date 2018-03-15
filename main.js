@@ -2,14 +2,6 @@
 // Title Button Functionality
 */
 
-//function to prevent default action for anchor elements
-const anchors = document.querySelectorAll('a');
-for(anchor of anchors){
-    anchor.addEventListener('click', function(){
-        event.preventDefault();
-    },false);
-}
-
 //function to close all details when one is clicked
 const workContainers = document.querySelectorAll('.workContainer');
 function closeWorkContainer(event){
