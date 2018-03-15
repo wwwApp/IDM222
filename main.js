@@ -45,27 +45,3 @@ function closeWorkContainer(event){
 for(const button of closeButtons){
     button.addEventListener('click', closeWorkContainer, false);
 }
-
-
-//randomly apply styles to work-titles
-/*
-window.addEventListener('load', function() {
-    //get the several random numbers within the length of worksTitle
-    var arr = [];
-    while(arr.length < 4){
-        var randomnumber = Math.floor(Math.random()*worksTitle.length);
-        if(arr.indexOf(randomnumber) > -1) 
-            continue;
-        arr[arr.length] = randomnumber;
-    }
-
-    for(var i=0; i<arr.length; i++)
-        console.log(arr[i]);
-
-    //using the array from above to change the text style on random worksTitle
-    worksTitle[arr[0]].style.textDecoration = "underline";
-    worksTitle[arr[1]].style.fontStyle = "italic";
-    worksTitle[arr[2]].style.fontWeight = "bold";
-    worksTitle[arr[3]].style.textDecoration = "underline";
-}, false);
-*/
